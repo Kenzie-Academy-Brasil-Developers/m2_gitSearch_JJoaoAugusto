@@ -12,11 +12,27 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/profile.css">
+
+    <!-- SCRIPTS -->
+    <script type="module" src="../scripts/profile.js"></script>
 
     <title>Git Search - User Profile</title>
   </head>
   <body>
-
-    <script type="module" src="../scripts/profile.js"></script>
+    <main>
+      <div class="profile__container">
+      <figure class="profile__figure">
+        <img class="profile__image" src="" alt="Imagem de Perfil">
+        <h2 class="profile__user">Nome do Perfil</h2>
+      </figure>
+      <button class="profile__button initial__page">Trocar de usuário</button>
+      </div>
+      <section class="user__container">
+        <ul class="user__list"></ul>
+      </section>
+    </main>
   </body>
 </html>
