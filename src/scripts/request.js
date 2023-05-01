@@ -20,7 +20,6 @@ export async function requestRepos(value){
   const repos = await fetch(`${baseUrl}/${value}/repos`, {
     method: 'GET'
   })
-
   .then (response =>{
     return response.json()
   })

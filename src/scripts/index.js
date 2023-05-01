@@ -1,8 +1,8 @@
 import {requestUser, requestRepos} from './request.js'
 
 function userInput() {
-    const buttonSearch = document.querySelector('.search__button')
-    const inputSearch = document.querySelector('.search__input')
+    const buttonSearch = document.querySelector('.search__form-button')
+    const inputSearch = document.querySelector('.search__form-input')
 
     buttonSearch.addEventListener('click', async (event) => {
         event.preventDefault()

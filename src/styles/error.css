@@ -1,0 +1,35 @@
+.main__error{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-primary);
+    gap: 10%;
+}
+
+.error__message{
+    display: flex;
+    flex-direction: column;
+    height: 15rem;
+    width: 15rem;
+    justify-content: space-around;
+}
+
+.message__button{
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-brand-2);
+    color: var(--color-grey-7);
+}
+
+.message__button:hover{
+    background-color: var(--color-brand-1);
+}
+
+.error__image{
+    width: 400px;
+    height: 350px;
+}

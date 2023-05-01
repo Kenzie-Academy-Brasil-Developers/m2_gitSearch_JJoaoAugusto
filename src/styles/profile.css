@@ -5,15 +5,15 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #191c1f;
     width: 80%;
     margin: 5% 0;
+    font-family: var(--font-primary);
 }
 
 .profile__container{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 14rem;
     width: 100%;
@@ -24,7 +24,7 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: start;
-    width: 40%;
+    margin-left: 8%;
 }
 
 .profile__image{
@@ -35,22 +35,23 @@ main{
     border: 2px solid var(--color-brand-1);
 }
 
-.profile__user{
-
-}
-
 .profile__button{
-    margin-right: 5%;
     background-color: var(--color-grey-2);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    color: white;
+    color: var(--color-grey-7);
+    margin-right: 10%;
+}
+.profile__button:hover{
+    background-color: var(--color-brand-2);
 }
 
 /* ESTILO POSTS */
 
 .user__container{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-bottom: 6rem;
@@ -61,37 +62,42 @@ main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: start;
 }
 
-.list__project{
-    width: 35%;
+.list__repos{
+    width: 575px;
     min-width: 300px;
-    max-width: 500px;
     height: 18rem;
+    margin: 1rem 3rem 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid white;
+    border: 1px solid var(--color-grey-7);;
     border-radius: 0.5rem;
-    margin: 1rem 3rem 1rem 0;
 }
 
-.project__title{
+.repos__title{
     margin: 2rem 2rem;
 }
 
-.project__description{
+.repos__description{
     margin: 1rem 2rem;
 }
 
-.project__button{
+.repos__button{
+    text-decoration: none;
     margin: 2rem 2rem;
     padding: 0.25rem 0;
-    width: 7rem;
     border: none;
     border-radius: 0.25rem;
+    background-color: var(--color-grey-3);
+    color: var(--color-grey-7);
+    padding: 0.5rem;
+    width: 5.5rem;
+}
+
+.repos__button:hover{
     background-color: var(--color-brand-2);
-    color: white;
 }

@@ -11,30 +11,43 @@ function renderProfile(data){
 }
 renderProfile(userData)
 
-function renderProjects(data){
+function renderRepos(data){
     const ul = document.querySelector('.user__list')
     data.forEach(repositorio => {
 
         const li = document.createElement('li')
-        li.classList.add('list__project')
+        li.classList.add('list__repos')
 
         let title = repositorio.name
-        if(repositorio.name.length > 25){
-            title = title.substring(0,25) + '...'
+        if(title.length > 20){
+            title = title.substring(0,20) + '...'
         }
 
         let desc = repositorio.description
-        if(repositorio.description.length > 100){
-            desc = desc.substring(0,100) + '...'
+        if(desc){
+            if(desc.length > 100){
+                desc = desc.substring(0,100) + '...'
+            }
         }
-
+        else{
+            desc = 'Sem descrição...'
+        }
+        
         li.innerHTML = 
         `
-            <h3 class="project__title">${repositorio.name}</h3>
-            <span class="project__description">${desc}</span>
-            <button class="project__button">Repositório</button>
+            <h3 class="repos__title">${title}</h3>
+            <span class="repos__description">${desc}</span>
+            <a href="${repositorio.html_url}" target="_blank" class="repos__button">Repositório</a>
         `
         ul.appendChild(li)
     })
 }
-renderProjects(userRepos)
+renderRepos(userRepos)
+
+function changeUser(){
+    const button = document.querySelector('.initial__page')
+    button.addEventListener('click', (event) => {
+        window.location.replace('../../index.html')
+    })
+}
+changeUser()
