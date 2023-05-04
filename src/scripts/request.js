@@ -5,7 +5,6 @@ export async function requestUser(value) {
         method: "GET"
       })
       .then (response => {
-        console.log(response)
           if(response.ok){
             return response.json()
           }
@@ -26,4 +25,5 @@ export async function requestRepos(value){
   localStorage.setItem('userRepos', JSON.stringify(repos))
   window.location.replace('../src/pages/profile.html')
 }
-  
+
+
